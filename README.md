@@ -93,3 +93,4 @@ Bisa, namun data yang didapat menjadi tidak sesuai struktur yang diinginkan. Bes
 7. Gunakan data yang didapat dan menampilkannya pada card
 8. Buat navigator.push pada onTap listTile dan kirim data detail pada detail page mywatchlist
 9. Tampilkan data detail pada mywatchlist detail
+
