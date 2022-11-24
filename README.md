@@ -68,3 +68,29 @@ Navigator bekerja menggunakan prinsip stack. Stack ini digunakan untuk layar. Mi
 4. Membuat model dataBudget
 5. Membuat list budget untuk menampung instances of budget
 6. Membuat halaman showBudget untuk menampilkan list budget dengan cara iterasi static list yang menyimpan list budget dan tampilkan di card
+
+# Assignment 9
+### Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Bisa, namun data yang didapat menjadi tidak sesuai struktur yang diinginkan. Best practice dari data fetching adalah membuat model terlebih dahulu agar data yang didapatkan lebih terstruktur
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+`Column` untuk membuat column, `Row` untuk membuat row, `Flexible` untuk membuat text tidak overflow, `Align` untuk memberikan alignment, `Container` untuk membuat container, `Icon` untuk memberikan icon
+
+### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+1. Import http (menambahkan depedensi http)
+2. Membuat model sesuai dengan attribute dari json yang akan di fetch
+3. HTTP request dengan GET
+4. Response didecode menjadi JSON kemudian dikonversi menjadi model yang dibuat
+5. Tampilkan dengan future builder
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Membuat model mywatchlist
+2. Membuat page mywatchlist
+3. Menambahkan pada drawer page mywatchlist
+4. Menambahkan depedency http dan menambah permission internet pada android
+5. Membuat util untuk fetch json dari tugas 3
+6. Memanfaatkan function util di mywatchlist untuk mendapatkan data watchlist
+7. Gunakan data yang didapat dan menampilkannya pada card
+8. Buat navigator.push pada onTap listTile dan kirim data detail pada detail page mywatchlist
+9. Tampilkan data detail pada mywatchlist detail
+
