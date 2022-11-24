@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/page/drawer.dart';
-import 'package:counter_7/fetch_mywatchlist.dart';
 import 'package:counter_7/model/mywatchlist.dart';
 
 class MyWatchListDetail extends StatelessWidget {

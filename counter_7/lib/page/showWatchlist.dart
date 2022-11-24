@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/page/drawer.dart';
-import 'package:counter_7/fetch_mywatchlist.dart';
+import 'package:counter_7/api/fetch_mywatchlist.dart';
 import 'package:counter_7/model/mywatchlist.dart';
 import 'package:counter_7/page/mywatchlistdetail.dart';
 
@@ -12,6 +12,7 @@ class MyWatchList extends StatefulWidget {
 }
 
 class _MyWatchListState extends State<MyWatchList> {
+  Future future = fetchWatchList();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +21,7 @@ class _MyWatchListState extends State<MyWatchList> {
         ),
         drawer: createDrawer(context),
         body: FutureBuilder(
-            future: fetchWatchList(),
+            future: future,
             builder: (context, AsyncSnapshot snapshot) {
               if (snapshot.data == null) {
                 return const Center(child: CircularProgressIndicator());
